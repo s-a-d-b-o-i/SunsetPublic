@@ -14,7 +14,7 @@ async function main(){
     for(;;){
         var sunsetLocal = 0;
 
-        axios.get('http://api.openweathermap.org/data/2.5/forecast?id=5301388&APPID=f204d06d667a32d5e3224a49fddef6fc')
+        axios.get(`http://api.openweathermap.org/data/2.5/forecast?id=5301388&APPID=${api_key}`)
             .then((response) => {
              console.log(response.data.city.sunset);
         });
